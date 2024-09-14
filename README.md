@@ -1,4 +1,4 @@
-# Resumo de AEDS até
+# Resumo de AEDS
 
 **1. Variáveis e Tipos de Dados:**
 
