@@ -1,0 +1,82 @@
+1. Faça um programa para mostrar na tela todas as tabuadas de multiplicar de 1 até 10.
+
+
+2. Faça um programa que leia números do teclado, calcule e mostre o cubo de cada número
+até entrar um número múltiplo de 7 que deverá ter seu cubo também impresso.
+
+
+3. Faça um programa que receba a quantidade de pessoas que assistiram a uma partida de
+futebol e mostre as mensagens de acordo com a tabela:
+menos que 1.000 – “público baixo”
+entre 1.001 e 10.000 – “público médio”
+acima de 10.000 – “público bom”
+Você irá ler informações para 10 partidas.
+
+
+4. Faça um programa que leia dois valores, um representando o saldo de uma pessoa e o outro
+representando o valor que será depositado ou retirado da conta de acordo com a seguinte
+regra. Se o valor do saldo for maior que o segundo valor digitado, seu programa faz a retirada
+do menor valor do saldo. Caso contrário, seu programa irá depositar este valor na conta,
+aumentando-o ao saldo. Mostre o saldo final.
+
+
+5. Escreva um programa que leia o peso de um indivíduo. Considere que serão lidos os pesos
+de 30 pessoas. Calcule e mostre:
+- A média aritmética dos pesos das pessoas que possuem mais de 60 Kg
+- O valor do peso da pessoa mais pesada
+
+
+6. Criar um programa para identificar o valor a ser pago por um plano de saúde dada a idade
+do conveniado considerando que todos pagam R$ 100 mais um adicional conforme a seguinte
+tabela:
+1) crianças com menos de 10 anos pagam R$180;
+2) conveniados com idade entre 10 e 30 anos pagam R$150;
+3) conveniados com idade entre 31 e 60 anos pagam R$195;
+4) conveniados com mais de 60 anos pagam R$230.
+A leitura de dados será encerrada quando o usuário digitar uma idade igual a -1
+
+
+7. Escrever um programa que leia um número n que indica quantos valores devem ser lidos a
+seguir. Para cada número lido, mostre uma tabela contendo o valor lido e o fatorial deste
+valor.
+
+
+8. Faça um programa que realize e mostre o produto entre 2 números inteiros A e B, através
+de somas sucessivas. Os números deverão ser lidos do teclado.
+
+
+9. Faça um programa que calcule e mostre o resultado para o seguinte somatório:
+
+
+10. Escreva um programa que calcule e mostre o valor da série:
+¶ = 4 - 4 + 4 - 4 + ... +/- 4
+3 5 7 N
+
+
+11. Desenvolver um programa que efetue a soma de todos os números ímpares que são
+múltiplos de três e que se encontram no conjunto dos números de 500 até 2100.
+
+
+12. Escreva um programa para calcular e escrever o valor final de S:
+S = 1/1 + 2/4 + 4/16 + 5/25 + 6/36 + ... 10/100
+
+
+13. A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando
+dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja saber:
+a) média da idade da população;
+b) média do número de filhos;
+c) maior idade;
+d) percentual de pessoas acima de 20 anos.
+O final da leitura de dados se dará com a entrada de uma idade negativa.
+
+
+14. Faça um programa para ler as coordenadas (X, Y) de uma quantidade indeterminada de
+pontos no sistema cartesiano. Para cada ponto escrever o quadrante a que ele pertence. O
+programa será encerrado quando as duas coordenadas digitadas forem 0 (nesta situação, sair
+sem escrever mensagem alguma).
+Para os dados de entrada abaixo deve ser gerada a seguinte saída:
+2 2: primeiro quadrante
+3 -2: quarto quadrante
+4 7 :primeiro quadrante
+-8 -1: terceiro quadrante
+-7 1: segundo quadrante
