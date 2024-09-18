@@ -19,7 +19,7 @@ int main() {
         printf("Digite um numero para saber se ele eh positivo: ");
         scanf("%d", &num);
 
-        // Chama a função ehpositivo e exibe a mensagem apropriada
+        // Chama a função ehpositivo e exibe a mensagem
         if (ehpositivo(num)) {
             printf("O numero %d eh positivo.\n", num);
         } else {
