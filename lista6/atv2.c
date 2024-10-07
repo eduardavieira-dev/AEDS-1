@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+/* 02. Faça uma função recursiva para calcular a potência entre dois números inteiros x e y (pot = xy).
+Não use a função pow ( ) pronta do C */
+
 float pot(int n, int p){
 
     if(p==0){
@@ -9,10 +12,6 @@ float pot(int n, int p){
     else{
     return n * pot(n, p-1);
     }
-
-
-
-
 
 }
 

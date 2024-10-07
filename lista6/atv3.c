@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+/* 03. Escreva uma função recursiva que calcule a soma dos dígitos de um inteiro estritamente
+positivo n. A soma dos dígitos de 132, por exemplo, é 6. Não use vetor! */
+
 float soma(int n){
     if(n==0){
     return 0;

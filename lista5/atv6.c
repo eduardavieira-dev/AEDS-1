@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Função para calcular o produtório de 1 até N
+// Funï¿½ï¿½o para calcular o produtï¿½rio de 1 atï¿½ N
 int produtorio(int N) {
     int resultado = 1;
     for (int i = 1; i <= N; i++) {
@@ -9,7 +9,7 @@ int produtorio(int N) {
     return resultado;
 }
 
-// Função para imprimir a tabuada de 3, 5 e 7
+// Funï¿½ï¿½o para imprimir a tabuada de 3, 5 e 7
 void tabuada() {
     for (int i = 1; i <= 10; i++) {
         printf("3 x %d = %d\n", i, 3 * i);
@@ -18,7 +18,7 @@ void tabuada() {
     }
 }
 
-// Função para calcular a soma da série S
+// Funï¿½ï¿½o para calcular a soma da sï¿½rie S
 int serie() {
     int a = 1, b = 1, c, soma = 2; // Inicia com os dois primeiros termos (1 + 1)
     for (int i = 3; i <= 8; i++) {
@@ -30,31 +30,31 @@ int serie() {
     return soma;
 }
 
-// Função para encontrar o quinto número primo a partir de 1000
+// Funï¿½ï¿½o para encontrar o quinto nï¿½mero primo a partir de 1000
 int quinto_primo() {
-    int count = 0; // Contador de números primos encontrados
-    int num = 1001; // Começa a verificar a partir de 1001
+    int count = 0; // Contador de nï¿½meros primos encontrados
+    int num = 1001; // Comeï¿½a a verificar a partir de 1001
 
-    // Enquanto não encontrarmos 5 números primos
+    // Enquanto nï¿½o encontrarmos 5 nï¿½meros primos
     while (count < 5) {
-        int is_primo = 1; // Assume que o número atual é primo
+        int is_primo = 1; // Assume que o nï¿½mero atual ï¿½ primo
 
-        // Verifica se 'num' é primo
-        for (int i = 2; i * i <= num; i++) { // Testa divisores de 2 até a raiz quadrada de 'num'
-            if (num % i == 0) { // Se 'num' for divisível por 'i'
-                is_primo = 0; // Não é primo
-                break; // Sai do loop, pois já sabemos que não é primo
+        // Verifica se 'num' ï¿½ primo
+        for (int i = 2; i * i <= num; i++) { // Testa divisores de 2 atï¿½ a raiz quadrada de 'num'
+            if (num % i == 0) { // Se 'num' for divisï¿½vel por 'i'
+                is_primo = 0; // Nï¿½o ï¿½ primo
+                break; // Sai do loop, pois jï¿½ sabemos que nï¿½o ï¿½ primo
             }
         }
 
-        // Se 'num' é primo, incrementa o contador
+        // Se 'num' ï¿½ primo, incrementa o contador
         if (is_primo) {
             count++; // Aumenta o contador de primos encontrados
         }
-        num++; // Verifica o próximo número
+        num++; // Verifica o prï¿½ximo nï¿½mero
     }
 
-    return num - 1; // Retorna o último número encontrado, que é o quinto primo
+    return num - 1; // Retorna o ï¿½ltimo nï¿½mero encontrado, que ï¿½ o quinto primo
 }
 
 int main() {
@@ -71,9 +71,9 @@ int main() {
     switch (opcao) {
         case 1: {
             int N;
-            printf("Digite o número N: ");
+            printf("Digite o numero N: ");
             scanf("%d", &N);
-            printf("O produtorio de 1 até %d é: %d\n", N, produtorio(N));
+            printf("O produtorio de 1 atï¿½ %d ï¿½: %d\n", N, produtorio(N));
             break;
         }
         case 2:
