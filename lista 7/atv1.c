@@ -26,8 +26,6 @@ int main(void){
     for(int i=0; i<20; i++){
         if(numeros[i]==procurar){
             printf("Numero do indice: %d", i);
-        }else{
-            printf("Não existe indice para este numero");
         }
     }
     return 0;
