@@ -1,3 +1,9 @@
+/* 
+* 1.Escreva um programa que leia do teclado uma string S. Gere uma string I, com os caracteres
+* em ordem contr√°ria.
+* Ex.: S = ‚ÄúAbacate‚Äù, I = ‚ÄúetacabA‚Äù
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,12 +15,12 @@ int main(){
 
     printf("Escreva um nome: ");
     fgets(nome, 70, stdin);
-    //stdin È a leitura do teclado padr„o
+    //stdin eh a leitura do teclado padrao
     int n = strlen(nome);
-    //pega exatamente a quantidade de letras que eu digitei, e n„o necessariamente 70
+    //pega exatamente a quantidade de letras que eu digitei, e nao necessariamente 70
 
     for(int i=n-1, j=0; i>=0; i--, j++){
-        //È usado n-1 pq ele pega o ultimo indice do vetor
+        //Eh usado n-1 pq ele pega o ultimo indice do vetor
         nomeInvertido[j]=nome[i];
         printf("%c", nome[i]);
     }
