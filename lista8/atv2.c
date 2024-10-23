@@ -13,7 +13,19 @@
 
 int main(){
     
+    char str[100];
+    int key;
 
+    printf("Digite uma palavra: ");
+    gets(str);
+    printf("Digite uma chave: ");
+    scanf("%d", &key);
+
+    for(int i=0; i<strlen(str); i++){
+        str[i] = (str[i]+ key) % 255;
+    }
+
+    printf("String Criptografada: %s \n", str);
 
     return 0;
 }
