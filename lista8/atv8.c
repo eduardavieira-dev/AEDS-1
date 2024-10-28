@@ -8,10 +8,38 @@
 
 #include <stdio.h>
 
+int main() {
+    // Declaração das variáveis
+    int valorInteiro;
+    float valorReal;
+    char caracter;
 
-int main(){
-    
+    // Declaração dos ponteiros
+    int *ptrInteiro = &valorInteiro;
+    float *ptrReal = &valorReal;
+    char *ptrChar = &caracter;
 
+    // Exibindo os endereços e os valores iniciais
+    printf("-Antes da alteracao---------------\n");
+    printf("Inteiro: Endereco = %p, Valor = %d\n", (void*)ptrInteiro, *ptrInteiro);
+    printf("Real: Endereco = %p, Valor = %.2f\n", (void*)ptrReal, *ptrReal);
+    printf("Caractere: Endereco = %p, Valor = %c\n", (void*)ptrChar, *ptrChar);
+
+    // Solicitando novos valores ao usuário
+    printf("\nDigite um novo valor inteiro: ");
+    scanf("%d", ptrInteiro);
+
+    printf("Digite um novo valor real: ");
+    scanf("%f", ptrReal);
+
+    printf("Digite um novo caractere: ");
+    scanf(" %c", ptrChar); // Espaço antes de %c para ignorar o Enter anterior
+
+    // Exibindo os endereços e os valores após a alteração
+    printf("\n-Depois da alteracao---------------\n");
+    printf("Inteiro: Endereco = %p, Valor = %d\n", (void*)ptrInteiro, *ptrInteiro);
+    printf("Real: Endereco = %p, Valor = %.2f\n", (void*)ptrReal, *ptrReal);
+    printf("Caractere: Endereco = %p, Valor = %c\n", (void*)ptrChar, *ptrChar);
 
     return 0;
 }

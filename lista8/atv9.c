@@ -8,12 +8,29 @@
 *comprimento e área calculados por ele
 */
 
-#include <stdio.h>
+#include <stdio.h> 
+#define PI 3.14159 
 
+// Função que calcula o comprimento e a área da circunferência
+void calcCircunferencia(float R, float *compr, float *area) {
+    *compr = 2 * PI * R;     // Calcula o comprimento e armazena no ponteiro 'compr'
+    *area = PI * R * R;       // Calcula a área e armazena no ponteiro 'area'
+}
 
-int main(){
-    
+int main() {
+    float raio;     
+    float comprimento, area;  
 
+    // Leitura do raio
+    printf("Digite o valor do raio: ");
+    scanf("%f", &raio);
+
+    // Chamada da função para calcular comprimento e área
+    calcCircunferencia(raio, &comprimento, &area);
+
+    // Exibindo os resultados
+    printf("Comprimento: %.2f\n", comprimento);
+    printf("Area: %.2f\n", area);
 
     return 0;
 }

@@ -22,6 +22,7 @@ int main(){
     scanf("%d", &key);
 
     for(int i=0; i<strlen(str); i++){
+        //strlen calcula a qtd de caracteres
         str[i] = (str[i]+ key) % 255;
     }
 

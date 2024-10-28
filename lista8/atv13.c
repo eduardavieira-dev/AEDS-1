@@ -6,10 +6,29 @@ b) os elementos da diagonal principal.
 
 #include <stdio.h>
 
+int main() {
+    int M[4][4], soma_abaixo_diagonal = 0;
 
-int main(){
-    
+    // Preenchendo a matriz 4x4
+    printf("Digite os elementos da matriz 4x4:\n");
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            printf("Elemento [%d][%d]: ", i + 1, j + 1);
+            scanf("%d", &M[i][j]);
+            // Soma dos elementos abaixo da diagonal principal
+            if (i > j) soma_abaixo_diagonal += M[i][j];
+        }
+    }
 
+    // Exibindo a soma dos elementos abaixo da diagonal principal
+    printf("\nSoma dos elementos abaixo da diagonal principal: %d\n", soma_abaixo_diagonal);
+
+    // Exibindo os elementos da diagonal principal
+    printf("Elementos da diagonal principal: ");
+    for (int i = 0; i < 4; i++) {
+        printf("%d ", M[i][i]);
+    }
+    printf("\n");
 
     return 0;
 }

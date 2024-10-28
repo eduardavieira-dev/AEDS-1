@@ -17,13 +17,27 @@
    return 0;
  }
 */
-
 #include <stdio.h>
 
+void func(int *px, int *py) {
+    px = py;               // px agora aponta para o endereço de py
+    *py = (*py) * (*px);  // Multiplica o valor de py pelo valor que px (que agora é py) aponta
+    *px = *px + 2;        // Adiciona 2 ao valor que px aponta (que é py, mas o valor de px não muda)
+}
 
-int main(){
+int main() {
+    int x, y;
     
-
-
+    // Leitura dos valores
+    printf("Digite x: ");
+    scanf("%d", &x);
+    printf("Digite y: ");
+    scanf("%d", &y);
+    
+    func(&x, &y); // Chamada da função passando os endereços de x e y
+    
+    // Exibe os resultados
+    printf("x = %d, y = %d\n", x, y);
+    
     return 0;
 }
