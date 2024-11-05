@@ -22,7 +22,7 @@ int main(){
     int num;
 
     printf("Quantos numeros deseja ver o fibonacci: ");
-    scanf("%d", &num);
+    scanf("%d", &num);     
 
 
     return 0;
