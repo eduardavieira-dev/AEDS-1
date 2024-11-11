@@ -37,7 +37,7 @@ int main(){
     int *numeros;
     int num, i;
 
-    printf("Quantos números deseja armazenar? ");
+    printf("Quantos numeros deseja armazenar? ");
     scanf("%d", &num);
 
     numeros = malloc(num * sizeof(int));
