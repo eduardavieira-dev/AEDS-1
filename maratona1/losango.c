@@ -1,37 +1,42 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int i, j, rows;
 
-    // Solicita o número de asteriscos na linha central (n = 5)
-    scanf("%d", &n);
+    // LÃª o nÃºmero de linhas diretamente
+    ///printf("Digite o nÃºmero de linhas: ");
+    scanf("%d", &rows);
 
-    // Parte superior do losango
-    for (int i = 1; i <= n; i += 2) {  // Aumenta de 2 em 2 (1, 3, 5)
-        // Imprime os espaços à esquerda
-        for (int j = 1; j <= (n - i) / 2; j++) {
+    // Metade superior do losango
+    for (i = 1; i <= rows; i++) {
+        // Imprime espaÃ§os
+        for (j = 1; j <= rows - i; j++) {
             printf(" ");
         }
-        // Imprime os asteriscos
-        for (int j = 1; j <= i; j++) {
+
+        // Imprime asteriscos
+        for (j = 1; j <= 2 * i - 1; j++) {
             printf("*");
         }
-        // Pula para a próxima linha
-        printf("\n");
+
+      
+        printf("\n");  // Adiciona uma linha extra em branco
     }
 
-    // Parte inferior do losango
-    for (int i = n - 2; i >= 1; i -= 2) {  // Diminui de 2 em 2 (3, 1)
-        // Imprime os espaços à esquerda
-        for (int j = 1; j <= (n - i) / 2; j++) {
+    // Metade inferior do losango
+    for (i = rows - 1; i >= 1; i--) {
+        // Imprime espaÃ§os
+        for (j = 1; j <= rows - i; j++) {
             printf(" ");
         }
-        // Imprime os asteriscos
-        for (int j = 1; j <= i; j++) {
+
+        // Imprime asteriscos
+        for (j = 1; j <= 2 * i - 1; j++) {
             printf("*");
         }
-        // Pula para a próxima linha
-        printf("\n");
+
+        printf("\n");  // Vai para a prÃ³xima linha
+ 
     }
 
     return 0;
