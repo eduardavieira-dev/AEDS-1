@@ -36,7 +36,7 @@ int main(){
         cout<<"Cliente "<<i+1<<":"<<endl;
         cout<<"Nome: ";
         cin>> nome;
-        cout<<"Endereço: ";
+        cout<<"Endereco: ";
         cin>> endereco;
         cout<<"Data de nascimento: ";
         cin>> data_nasc;

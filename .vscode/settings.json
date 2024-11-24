@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "atv5.C": "cpp"
+        "atv5.C": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }

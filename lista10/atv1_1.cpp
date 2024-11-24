@@ -50,11 +50,11 @@ int main() {
         getline(cin, endereco);
 
         cout << "Data de nascimento: ";
-        getline(cin, data_nasc);  // Usar getline para permitir espaços na data de nascimento
+        getline(cin, data_nasc);  // Usar getline para permitir espaï¿½os na data de nascimento
 
         cout << "Telefone: ";
         cin >> telefone;
-        cin.ignore();  // Limpa o buffer do cin após ler um número
+        cin.ignore();  // Limpa o buffer do cin apos ler um numero
 
 
         Cliente novoCliente(nome, data_nasc, endereco, telefone);

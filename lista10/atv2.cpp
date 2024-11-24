@@ -1,86 +1,66 @@
 #include <iostream>
-#include <string>
-#include <vector>
-
 using namespace std;
 
-class Loja {
+
+class Eletrodomestico {
 private:
-    string nome;
-    int telefone;
-    float preco;
+    string loja;
+    string telefone;
+    double preco;
 
 public:
-
-    Loja(string n, int t, float p) {
-        nome = n;
-        telefone =  t;
-        preco = p;
+  
+    void setDados(string nomeLoja, string tel, double valor) {
+        loja = nomeLoja;
+        telefone = tel;
+        preco = valor;
     }
 
-
-    void exibirCliente() const {
-        cout << "Nome da Loja: " << nome << endl;
-        cout << "Telefone: " << telefone << endl;
-        cout << "Preco: " << preco << endl;
-
+   
+    double getPreco() { 
+        return preco; 
     }
 };
 
 int main() {
-    vector<Loja> lojas;
-    int num = 2;
-    float preco, precoMax=0, precoMin=100000, numMedia=0, contador, media;
+    Eletrodomestico lista[15]; 
+    double menor, maior, soma = 0.0;
 
 
-    for (int i = 0; i < num; i++) {
-        string nome;
-        int telefone;
-        float preco;
+    for (int i = 0; i < 15; ++i) {
+        string loja, telefone;
+        double preco;
 
-        cout << "Eletrodomestico " << i + 1 << ":" << endl;
-
-        cout << "Nome da Loja: ";
-        getline(cin, nome);
-
-        cout << "Telefone: ";
+        cout << "Cadastro do item " << i + 1 << ":" << endl;
+        cout << "Nome da loja: ";
+        cin >> loja;
+        cout << "Telefone da loja: ";
         cin >> telefone;
-
-        cout << "Preco: ";
+        cout << "Preco do eletrodomestico: R$ ";
         cin >> preco;
 
-
-        cin.ignore();
-
-
-        Loja novaLoja(nome, telefone, preco );
-        lojas.push_back(novaLoja);
-
-        numMedia+=preco;
-        contador++;
+        lista[i].setDados(loja, telefone, preco);
     }
 
-        media = numMedia/contador;
+    
+    menor = lista[0].getPreco();
+    maior = lista[0].getPreco();
 
-
-
-    cout << "\nLojas cadastradas:\n";
-    for (int i = 0; i < lojas.size(); i++) {
-        cout << "\nLoja com maior preco " << i + 1 << ":" << endl;
-          if(preco>precoMax){
-            lojas[i].exibirCliente();
-        }
+    
+    for (int i = 0; i < 15; ++i) {
+        double preco = lista[i].getPreco();
+        if (preco < menor) menor = preco;
+        if (preco > maior) maior = preco;
+        soma += preco;
     }
 
-    for (int i = 0; i < lojas.size(); i++) {
-        cout << "\nLoja com menor preco " << i + 1 << ":" << endl;
-          if(preco<precoMin){
-            lojas[i].exibirCliente();
-        }
-    }
+    double media = soma / 15;
 
-        cout << "\nPreco Medio:" << media << "" << endl;
-
+    
+    cout << "\nEstatisticas dos preços cadastrados:" << endl;
+    cout << "Menor preço: R$ " << menor << endl;
+    cout << "Preço medio: R$ " << media << endl;
+    cout << "Maior preco: R$ " << maior << endl;
 
     return 0;
 }
