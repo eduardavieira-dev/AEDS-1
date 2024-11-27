@@ -1,55 +1,72 @@
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <vector>
 
 using namespace std;
 
-class Cliente{
-  private:
-
+class Cliente {
+private:
     string nome;
     string data_nasc;
     string endereco;
     int telefone;
 
-  public:
+public:
 
-    Cliente(string n, string d, string e, int telefone){
+    Cliente(string n, string d, string e, int t) {
         nome = n;
         data_nasc = d;
         endereco = e;
-        this->telefone=telefone;
+        telefone = t;
+    }
 
+
+    void exibirCliente() const {
+        cout << "Nome: " << nome << endl;
+        cout << "Data de Nascimento: " << data_nasc << endl;
+        cout << "Endereco: " << endereco << endl;
+        cout << "Telefone: " << telefone << endl;
     }
 };
 
-int main(){
-    vector<Cliente>cliente;
+int main() {
+    vector<Cliente> clientes;  // Vetor para armazenar os clientes
     int numClientes;
 
-    cout<<"Quantos clientes quer cadastrar: ";
-    cin>> numClientes;
+    cout << "Quantos clientes quer cadastrar: ";
+    cin >> numClientes;
+    cin.ignore();  // Limpa o buffer do cin
 
-    for(int i=0; i<numClientes; i++){
+    for (int i = 0; i < numClientes; i++) {
         string nome, endereco, data_nasc;
         int telefone;
-        cout<<"Cliente "<<i+1<<":"<<endl;
-        cout<<"Nome: ";
-        cin>> nome;
-        cout<<"Endereco: ";
-        cin>> endereco;
-        cout<<"Data de nascimento: ";
-        cin>> data_nasc;
-        cout<<"Telefone: ";
-        cin>> telefone;
 
-        Cliente novoCliente(nome, endereco, data_nasc, telefone);
-        cliente.push_back(novoCliente);
+        cout << "Cliente " << i + 1 << ":" << endl;
 
+        cout << "Nome: ";
+        getline(cin, nome);
+
+        cout << "Endereco: ";
+        getline(cin, endereco);
+
+        cout << "Data de nascimento: ";
+        getline(cin, data_nasc);  
+
+        cout << "Telefone: ";
+        cin >> telefone;
+        cin.ignore();  // Limpa o buffer do cin apos ler um numero
+
+
+        Cliente novoCliente(nome, data_nasc, endereco, telefone);
+        clientes.push_back(novoCliente);
     }
 
-    cout<<"Clientes adicionados. "<<endl;
 
+    cout << "\nClientes cadastrados:\n";
+    for (int i = 0; i < clientes.size(); i++) {
+        cout << "\nCliente " << i + 1 << "\n"<<endl;
+        clientes[i].exibirCliente();
+    }
 
     return 0;
 }
