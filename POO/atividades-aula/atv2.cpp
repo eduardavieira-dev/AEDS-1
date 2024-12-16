@@ -1,6 +1,6 @@
 #include <iostream>
 #include<string.h>
-#include<vector>
+
 
 using namespace std;
 
@@ -12,12 +12,8 @@ private:
     string telefone;
 public:
 
-    Clientes(string n, string d, string e, string t){
-        nome=n;
-        data_nasc=d;
-        endereco=e;
-        telefone=t;
-    }
+    Clientes(string n, string d, string e, string t):nome(n), data_nasc(d), endereco(e), telefone(t){}
+
     void exibirCliente(){
         cout<<"Nome "<<nome<<endl;
         cout<<"Data de nascimento "<<data_nasc<<endl;
@@ -52,6 +48,8 @@ int main(){
         novoCliente[i]->exibirCliente();
         // Chama o metodo exibirCliente para mostrar os dados de cada cliente
      }
+
+     delete[] novoCliente;
 
     return 0;
 }
